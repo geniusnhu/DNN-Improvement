@@ -37,7 +37,7 @@ Techniques to improve DNN performance usign Fashion MNIST as example.
 ---
 #### Summary performance of Classification task with ```Fashion MNIST``` dataset using He Initialization and ReLU activation function
 
-| Optimizer | Train set accuracy | Val set accuracy | Running time (seconds) |
+| Optimizer | Train set MSE | Val set MSE | Running time (seconds) |
 | ------ |:------------------:|:----------------:| :----------------------:|
 | Regular SGD | 86.72% | 86.37% | 141.7 |
 | SGD with momentum=0.9 | 91.54%      |   88.57% | 154.6 |
@@ -45,5 +45,19 @@ Techniques to improve DNN performance usign Fashion MNIST as example.
 | AdaGrad | 86.59%      |    85.82% | 162.99 |
 | RMSProp | 87.53%      |    87.07% | 249.5 |
 | Adam | 92.24%      |    89.47% | 193.8 |
-| Adamax | 92.91%  | 89.55% | 175.4 |
+| **Adamax** | **92.91%**  | **89.55%** | **175.4** |
 | Nadam | 92.98%      |    89.55% | 297.4 |
+
+
+#### Summary performance of Regression task with ```California housing``` dataset using He Initialization and ReLU activation function
+
+| Optimizer | Train set MSE | Val set MSE | Running time (seconds) | Epoch |
+| ------ |:------------------:|:----------------:| :------------:|:---------:|
+| Regular SGD | 0.3517 | 0.3469 | 13.06 | 20 |
+| SGD with momentum=0.9 | 0.3082      |  0.2964 | 13.68 | 19 |
+| Nesterov Accelerated Gradient | 0.3125      |  0.3011 | 13.3 | 15 |
+| AdaGrad | 0.5317     |    1.2473 | 13.84 | 20 |
+| **RMSProp** | **0.2621**    |    **0.2743** | **18.63** | **25** |
+| **Adam** | **0.2469**    |    **0.2642** | **31.24** | **37** |
+| Adamax | 0.2680  | 0.2787 | 26.94 | 39 |
+| Nadam | 0.2407   |    0.2643 | 31.47 | 36 |
